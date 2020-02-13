@@ -26,8 +26,12 @@ public class Assignments {
     public int primeCount(int start,int end){
         int count=0;
         for(int i=start;i<=end;i++){
-            if(i){
-                
+            int var=2;
+            if(i%var==0){
+                var++;
+            }
+            else{
+                count++;
             }
         }
         return count;
