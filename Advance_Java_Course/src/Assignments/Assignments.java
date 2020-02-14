@@ -22,23 +22,4 @@ public class Assignments {
         }
         return num;
     }
-    //Program for counting the prime number between the two number provided by the user
-    public int primeCount(int start,int end){
-        int count=0;
-        for(int i=start;i<=end;i++){
-            int var=2;
-            if(i%var==0){
-                var++;
-                
-            }
-            else{
-                count++;
-                
-                System.out.println(i);
-            }
-
-        }
-        return count;
-    }
-
 }
