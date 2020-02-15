@@ -32,13 +32,13 @@ public class Question_2 {
 
     private int prevSum, newSum, index;
 
-    Question_2() {
+    public Question_2() {
         prevSum = 0;
         newSum = 0;
         index = 0;
     }
 
-    public boolean isMadhavArray(int[] a) {
+    public int isMadhavArray(int[] a) {
         int i = 0;
         int l = 0;
         while (true) {
@@ -47,7 +47,7 @@ public class Question_2 {
                 break;
             }
             if (i > a.length) {
-                return false;
+                return 0;
             }
             i++;
         }
@@ -56,13 +56,13 @@ public class Question_2 {
             try {
                 newSum = arraySum(a, index, j);
             } catch (ArrayIndexOutOfBoundsException e) {
-                return false;
+                return 0;
             }
             if (prevSum != newSum) {
-                return false;
+                return 0;
             }
         }
-        return true;
+        return 1;
     }
 
     public int arraySum(int[] array, int index, int count) throws ArrayIndexOutOfBoundsException {
@@ -73,6 +73,5 @@ public class Question_2 {
         }
         return sum;
     }
-
 }
 

@@ -5,7 +5,7 @@
  */
 package advance_java_course;
 
-import Assignments.*;
+import Assignments.Question_2;
 
 import java.util.Scanner;
 
@@ -35,10 +35,10 @@ public class Advance_Java_Course {
 
         //Question 2
         Question_2 obj = new Question_2();
-
         int a[] = {6, 2, 4, 2, 2, 2, 1, 5, 0, 0};
 
         System.out.println(obj.isMadhavArray(a));
+
     }
 
 }
