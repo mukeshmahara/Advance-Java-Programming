@@ -29,5 +29,5 @@ public class Question_1 {
         }
         return count;
     }
-    Question_1  primecounter;
+    
 }
