@@ -45,7 +45,7 @@ The function returns the number of primes between start and end inclusive. Recal
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>2<td>
+		<td>2</td>
 		<td>0</td>
 		<td>start must be less than or equal to end</td>
 	</tr>
