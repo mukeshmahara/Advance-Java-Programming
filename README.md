@@ -13,49 +13,42 @@ The function returns the number of primes between start and end inclusive. Recal
 		<th>return</th>
 		<th>reason</th>
 	</tr>
-	
 	<tr>
 		<td>10</td>	
 		<td>30</td>	
 		<td>6</td>	
 		<td>The primes between 10 and 30 inclusive are 11, 13, 17, 19, 23 and 29</td>
 	</tr>
-	
 	<tr>
 		<td>11</td>	
 		<td>29</td>	
 		<td>6</td>	
 		<td>The primes between 11 and 29 inclusive are 11, 13, 17, 19, 23 and 29</td>
 	</tr>
-	
 	<tr>
 		<td>20</td>
 		<td>22</td>
 		<td>0</td>
 		<td>20, 21, and 22 are all non-prime</td>
 	</tr>
-	
 	<tr>
 		<td>1</td>
 		<td>1</td>	
 		<td>0</td>
 		<td>By definition, 1 is not a prime number</td>
 	</tr>
-	
 	<tr>
 		<td>5</td>
 		<td>5</td>
 		<td>1</td>
 		<td>5 is a prime number</td>
 	</tr>
-	
 	<tr>
 		<td>6</td>
 		<td>2<td>
 		<td>0</td>
 		<td>start must be less than or equal to end</td>
 	</tr>
-	
 	<tr>
 		<td>-10</td>
 		<td>6</td>
