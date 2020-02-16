@@ -182,6 +182,7 @@ the function signature is
 		<td>0</td>
 		<td>there is no odd value in the array.</td>
 	</tr>
+</table>
 
 <b>Quesiton 4</b><br>
 Define a square pair to be the tuple <x, y> where x and y are positive, non-zero integers, x<y and x + y is a perfect square. A perfect square is an integer whose square root is also an integer, e.g. 4, 9, 16 are perfect squares but 3, 10 and 17 are not. Write a function named countSquarePairs that takes an array and returns the number of square pairs that can be constructed from the elements in the array. For example, if the array is {11, 5, 4, 20} the function would return 3 because the only square pairs that can be constructed from those numbers are <5, 11>, 
