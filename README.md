@@ -68,15 +68,48 @@ the function signature is
 
 
 <b>Examples</b></br>
-if a is 	return	reason
-{2, 1, 1}	1	2 + 1 + 1
-{2, 1, 1, 4, -1, -1}	1	2 = 1 + 1, 2 = 4 + -1 + -1
-{6, 2, 4, 2, 2, 2, 1, 5, 0, 0}	1	6 = 2 + 4, 6 = 2 + 2 + 2, 6 = 1 + 5 + 0 + 0
-{18, 9, 10, 6, 6, 6}	0	18 != 9 + 10
-{-6, -3, -3, 8, -5, -4}	0	-6 != 8 + -5 + -4
-{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, -2, -1}	1	0 = 0 + 0, 0 = 0 + 0 + 0, 0 = 0 + 0 + 0 + 0, 
-0 = 1 + 1 + 1 + -2 + -1
-{3, 1, 2, 3, 0}	0	The length of the array is 5, but 5 does not equal n*(n+1)/2 for any value of n.
+<table>
+	<tr>
+		<th>if a is</th> 	
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{2, 1, 1}</td>
+		<td>1</td>
+		<td>2 + 1 + 1</td>
+	</tr>
+	<tr>
+		<td>{2, 1, 1, 4, -1, -1}</td>
+		<td>1</td>
+		<td>2 = 1 + 1, 2 = 4 + -1 + -1</td>
+	</tr>
+	<tr>
+		<td>{6, 2, 4, 2, 2, 2, 1, 5, 0, 0}</td>
+		<td>1</td>
+		<td>6 = 2 + 4, 6 = 2 + 2 + 2, 6 = 1 + 5 + 0 + 0</td>
+	</tr>
+	<tr>
+		<td>{18, 9, 10, 6, 6, 6}</td>
+		<td>0</td>
+		<td>18 != 9 + 10</td>
+	</tr>
+	<tr>
+		<td>{-6, -3, -3, 8, -5, -4}</td>
+		<td>0</td>
+		<td>-6 != 8 + -5 + -4</td>
+	</tr>
+	<tr>
+		<td>{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, -2, -1}</td>
+		<td>1</td>
+		<td>0 = 0 + 0, 0 = 0 + 0 + 0, 0 = 0 + 0 + 0 + 0, 0 = 1 + 1 + 1 + -2 + -1</td>
+	</tr>
+	<tr>
+		<td>{3, 1, 2, 3, 0}</td>
+		<td>0</td>
+		<td>The length of the array is 5, but 5 does not equal n*(n+1)/2 for any value of n.</td>
+	</tr>
+</table>
 
 
 <b>Quesiton 3</b><br>
