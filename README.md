@@ -6,7 +6,7 @@
 The function returns the number of primes between start and end inclusive. Recall that a prime is a positive integer greater than 1 whose only integer factors  are 1 and itself.
 
 <b>Examples</b></br>
-<tr><th>If start is</th>	<th>and end is</th>	<th>return</th>	<th>reason</th></tr>
+<table><tr><th>If start is</th>	<th>and end is</th>	<th>return</th>	<th>reason</th></tr>
 10	30	6	The primes between 10 and 30 inclusive are 11, 13, 17, 19, 23 and 29
 11	29	6	The primes between 11 and 29 inclusive are 11, 13, 17, 19, 23 and 29
 20	22	0	20, 21, and 22 are all non-prime
@@ -14,8 +14,7 @@ The function returns the number of primes between start and end inclusive. Recal
 5	5	1	5 is a prime number
 6	2	0	start must be less than or equal to end
 -10	6	3	primes are greater than 1 and 2, 3, 5 are  prime
-
-
+</table>
 <b>Quesiton 2</b><br>
 A Madhav array has the following property. 
    a[0] = a[1] + a[2] = a[3] + a[4] + a[5] = a[6] + a[7] + a[8] + a[9] = ...
