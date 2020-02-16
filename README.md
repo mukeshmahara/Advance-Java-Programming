@@ -195,7 +195,7 @@ You may assume that there are no duplicate values in the array, i.e, you don't h
 Examples:
 <table>
 	<tr>
-		<th>if a is</th>
+		<th><pre>if a is</pre></th>
 		<th>return</th>
 		<th>reason</th>
 	</tr>
