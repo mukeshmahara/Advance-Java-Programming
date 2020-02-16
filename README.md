@@ -68,15 +68,48 @@ the function signature is
 
 
 <b>Examples</b></br>
-if a is 	return	reason
-{2, 1, 1}	1	2 + 1 + 1
-{2, 1, 1, 4, -1, -1}	1	2 = 1 + 1, 2 = 4 + -1 + -1
-{6, 2, 4, 2, 2, 2, 1, 5, 0, 0}	1	6 = 2 + 4, 6 = 2 + 2 + 2, 6 = 1 + 5 + 0 + 0
-{18, 9, 10, 6, 6, 6}	0	18 != 9 + 10
-{-6, -3, -3, 8, -5, -4}	0	-6 != 8 + -5 + -4
-{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, -2, -1}	1	0 = 0 + 0, 0 = 0 + 0 + 0, 0 = 0 + 0 + 0 + 0, 
-0 = 1 + 1 + 1 + -2 + -1
-{3, 1, 2, 3, 0}	0	The length of the array is 5, but 5 does not equal n*(n+1)/2 for any value of n.
+<table>
+	<tr>
+		<th>if a is</th> 	
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{2, 1, 1}</td>
+		<td>1</td>
+		<td>2 + 1 + 1</td>
+	</tr>
+	<tr>
+		<td>{2, 1, 1, 4, -1, -1}</td>
+		<td>1</td>
+		<td>2 = 1 + 1, 2 = 4 + -1 + -1</td>
+	</tr>
+	<tr>
+		<td>{6, 2, 4, 2, 2, 2, 1, 5, 0, 0}</td>
+		<td>1</td>
+		<td>6 = 2 + 4, 6 = 2 + 2 + 2, 6 = 1 + 5 + 0 + 0</td>
+	</tr>
+	<tr>
+		<td>{18, 9, 10, 6, 6, 6}</td>
+		<td>0</td>
+		<td>18 != 9 + 10</td>
+	</tr>
+	<tr>
+		<td>{-6, -3, -3, 8, -5, -4}</td>
+		<td>0</td>
+		<td>-6 != 8 + -5 + -4</td>
+	</tr>
+	<tr>
+		<td>{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, -2, -1}</td>
+		<td>1</td>
+		<td>0 = 0 + 0, 0 = 0 + 0 + 0, 0 = 0 + 0 + 0 + 0, 0 = 1 + 1 + 1 + -2 + -1</td>
+	</tr>
+	<tr>
+		<td>{3, 1, 2, 3, 0}</td>
+		<td>0</td>
+		<td>The length of the array is 5, but 5 does not equal n*(n+1)/2 for any value of n.</td>
+	</tr>
+</table>
 
 
 <b>Quesiton 3</b><br>
@@ -98,16 +131,58 @@ the function signature is
 	int isInertial(int[ ] a) 
 
 <b>Some other examples:</b></br> 
-if the input array is	return	reason
-{1}	0	fails condition (a) - the maximum value must be even
-{2}	0	fails condition (b) - the array must contain at least one odd value.
-{1, 2, 3, 4}	0	fails condition (c) - 1 (which is odd) is not greater than all even values other than the maximum (1 is less than 2 which is not the maximum)
-{1, 1, 1, 1, 1, 1, 2}	1	there is no even number other than the maximum. Hence, there can be no other even values  that are greater than 1.
-{2, 12, 4, 6, 8, 11}	1	11, the only odd value is greater than all even values except 12 which is the maximum value in the array.
-{2, 12, 12, 4, 6, 8, 11}	1	same as previous, i.e., it is OK if maximum value occurs more than once.
-{-2, -4, -6, -8, -11}	0	-8, which is even, is not the maximum value but is greater than -11 which is odd
-{2, 3, 5, 7}	0	the maximum value is odd
-{2, 4, 6, 8, 10}	0	there is no odd value in the array.
+<table>
+	<tr>
+		<th>if the input array is</th>
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{1}</td>
+		<td>0</td>
+		<td>fails condition (a) - the maximum value must be even</td>
+	</tr>
+	<tr>
+		<td>{2}</td>
+		<td>0</td>
+		<td>fails condition (b) - the array must contain at least one odd value.</td>
+	</tr>
+	<tr>
+		<td>{1, 2, 3, 4}</td>
+		<td>0</td>
+		<td>	fails condition (c) - 1 (which is odd) is not greater than all even values other than the maximum (1 is less 				than 2 which is not the maximum)</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 1, 1, 1, 2}</td>
+		<td>1</td>
+		<td>there is no even number other than the maximum. Hence, there can be no other even values  that are greater than 1.			</td>
+	</tr>
+	<tr>
+		<td>{2, 12, 4, 6, 8, 11}</td>
+		<td>1</td>
+		<td>11, the only odd value is greater than all even values except 12 which is the maximum value in the array.</td>
+	</tr>
+	<tr>
+		<td>{2, 12, 12, 4, 6, 8, 11}</td>
+		<td>1</td>
+		<td>same as previous, i.e., it is OK if maximum value occurs more than once.</td>
+	</tr>
+	<tr>
+		<td>{-2, -4, -6, -8, -11}</td>
+		<td>0</td>
+		<td>-8, which is even, is not the maximum value but is greater than -11 which is odd</td>
+	</tr>
+	<tr>
+		<td>{2, 3, 5, 7}</td>
+		<td>0</td>
+		<td>the maximum value is odd</td>
+	</tr>
+	<tr>
+		<td>{2, 4, 6, 8, 10}</td>
+		<td>0</td>
+		<td>there is no odd value in the array.</td>
+	</tr>
+</table>
 
 <b>Quesiton 4</b><br>
 Define a square pair to be the tuple <x, y> where x and y are positive, non-zero integers, x<y and x + y is a perfect square. A perfect square is an integer whose square root is also an integer, e.g. 4, 9, 16 are perfect squares but 3, 10 and 17 are not. Write a function named countSquarePairs that takes an array and returns the number of square pairs that can be constructed from the elements in the array. For example, if the array is {11, 5, 4, 20} the function would return 3 because the only square pairs that can be constructed from those numbers are <5, 11>, 
@@ -119,8 +194,23 @@ the function signature is
 You may assume that there are no duplicate values in the array, i.e, you don't have to deal with an array like {2, 7, 2, 2}.
 
 Examples:
-if a is	return	reason
-{9, 0, 2, -5, 7}	2	The square pairs are <2, 7> and <7, 9>. Note that <-5, 9> and <0, 9> are not square pairs, even though they sum to perfect squares, because both members of a square pair have to be greater than 0. Also <7,2> and <9,7> are not square pairs because the first number has to be less than the second number.
-{9}	0	The array must have at least 2 elements
+<table>
+	<tr>
+		<th><pre>if a is</pre></th>
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{9, 0, 2, -5, 7}</td>
+		<td>2</td>
+		<td>	The square pairs are <2, 7> and <7, 9>. Note that <-5, 9> and <0, 9> are not square pairs, even though they sum 			to perfect squares, because both members of a square pair have to be greater than 0. Also <7,2> and <9,7> are 				not square pairs because the first number has to be less than the second number.
+			</td>
+	</tr>
+	<tr>
+		<td>{9}</td>
+		<td>0</td>
+		<td>The array must have at least 2 elements</td>
+	</tr>
+</table>
 
 
