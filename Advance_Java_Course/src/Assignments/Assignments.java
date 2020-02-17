@@ -23,4 +23,10 @@ public class Assignments {
         }
         return num;
     }
+    
+    public static void main(){
+        
+        
+    
+    }
 }
