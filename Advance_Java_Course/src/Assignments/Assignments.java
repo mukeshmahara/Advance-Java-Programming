@@ -10,8 +10,7 @@ package Assignments;
  *
  * @author Dell
  */
-public class Assignments {
-
+class Counter{
     int num;
 //Function for calculating the next perfect number 
     public double next_Perfect_Square(int n) {
@@ -23,8 +22,15 @@ public class Assignments {
         }
         return num;
     }
+}
+public class Assignments {
+
+    
     
     public static void main(){
+        
+        Counter c = new Counter();
+        
         
         
     

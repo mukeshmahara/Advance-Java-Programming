@@ -53,10 +53,13 @@ public class Practical_2 {
     
     public static void main(String[] args){
         
+        //using parametrized constructor
         Rectangle r = new Rectangle(20,20);
         System.out.println("Desc:"+r.toString());
         System.out.println("Area:"+r.getArea());
         System.out.println("Perimeter :"+r.getPeri());
+        
+//        using out setter and methods
         r.setLength(10);
         r.setWidth(5);
         System.out.println("Desc:"+r.toString());
