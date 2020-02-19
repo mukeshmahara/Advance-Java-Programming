@@ -73,10 +73,10 @@ public class Practical_4 {
         System.out.println("Account _balance:"+a.getBalance());
         
         int balance_afterdebit = a.debit_amount(16000);
-        System.out.println("balance after with draw amount :"+balance_afterdebit);;
+        System.out.println("balance after withdraw  :"+balance_afterdebit);;
         
         int balance_afterCredit = a.credit_amount(4000);
-        System.out.println("balance After Credit amount :"+balance_afterCredit);
+        System.out.println("balance After Credit  :"+balance_afterCredit);
         a.tranfer_to("mukesh", 6000);
         
         System.out.println(a.toString());
