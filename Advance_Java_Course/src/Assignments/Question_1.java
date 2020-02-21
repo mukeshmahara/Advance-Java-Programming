@@ -5,6 +5,8 @@
  */
 package Assignments;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Dell
@@ -23,11 +25,24 @@ public class Question_1 {
             else{
                 count++;
                 
-                System.out.println(i);
+                
             }
 
         }
         return count;
+    }
+    
+    public static void main(String[] args){
+        Question_1 q = new Question_1();
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the start point number:");
+        int start =s.nextInt();
+        System.out.println("Enter the end point number :");
+        int end = s.nextInt();
+        q.primeCount(start, end);
+        
+        System.out.println("The prime number between "+ start+" and "+end+" are : "+q.primeCount(start, end)+ " prime numbers");
+        
     }
     
 }
