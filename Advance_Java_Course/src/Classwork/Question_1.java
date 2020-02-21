@@ -16,9 +16,15 @@ import java.util.Scanner;
  * @author Dell
  */
 //Write a java program to swap two int variables. without using third or temp variable
+class meroans {
+
+}
 
 public class Question_1 {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int input = s.nextInt();
 //        List<Integer> num = new ArrayList<>();
 //        num.add(1);
 //        num.add(2);
@@ -26,11 +32,8 @@ public class Question_1 {
 //        Collections.swap(num, 0, 1);
 //        System.out.println("After Swap :"+num
 //        );
-        Scanner s = new Scanner(System.in);
         
-        System.out.println("Enter the value of a :");
-        int input=s.nextInt();
-        System.out.println(""+input);
+        
         
     }
 }
