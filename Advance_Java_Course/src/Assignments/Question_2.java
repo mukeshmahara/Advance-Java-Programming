@@ -73,5 +73,12 @@ public class Question_2 {
         }
         return sum;
     }
+    
+    public static void main(String[] args){
+        Question_2 _2 = new Question_2();
+                int a[] = {6, 2, 4, 2, 2, 2, 1, 5, 0, 0};
+
+                System.out.println(_2.isMadhavArray(a));
+    }
 }
 
