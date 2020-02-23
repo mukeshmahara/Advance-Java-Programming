@@ -326,4 +326,128 @@ Examples
 </table>
 
 
+<hr>
+
+<b>Quesiton 8</b><br>
+8. The sum factor of an array is defined to be the number of times that the sum of the array appears as an element of the array. So the sum factor of {1, -1, 1, -1, 1, -1, 1} is 4 because the sum of the elements of the array is 1 and 1 appears four times in the array. And the sum factor of 
+{1, 2, 3, 4} is 0 because the sum of the elements of the array is 10 and 10 does not occur as an element of the array. The sum factor of the empty array { } is defined to be 0.
+
+Write a function named sumFactor that returns the sum factor of its array argument.
+
+If you are programming in Java, the function signature is
+	int sumFactor(int[ ] a)
+
+Examples:
+<table>
+	<tr>
+		<td>if a is</td>
+		<td>return</td>
+		<td>reason</td>
+	</tr>
+	<tr>
+		<td>{3, 0, 2, -5, 0}</td>
+		<td>2</td>
+		<td>The sum of array is 0 and 0 occurs 2 times</td>
+	</tr>
+	<tr>
+		<td>{9, -3, -3, -1, -1}</td>
+		<td>0</td>
+		<td>The sum of the array is 1 and 1 does not occur in array.</td>
+	</tr>	
+	<tr>
+		<td>{1}</td>
+		<td>1</td>
+		<td>The sum of the array is 1 and 1 occurs once in the array</td>
+	</tr>
+	<tr>
+		<td>{0, 0, 0}</td>
+		<td>3</td>
+		<td>The sum of the array is 0 and 0 occurs 3 times in the array</td>
+	</tr>
+	
+</table>
+
+
+<hr>
+
+<b>Quesiton 9</b><br>
+9.    It is a fact that there exist two numbers x and y such that  x! + y! = 10!. Write a method named solve10  that returns the values x and y in an array.
+
+The notation n! is called n factorial and is equal to n * n-1 * n-2 * ... 2 * 1, e.g.,  5! = 5*4*3*2*1 = 120.
+
+the function prototype is
+   int[ ] solve10() where the length of the returned array is 2.
+
+
+Please be sure that the method solve10 returns an array, a, with two elements 
+where a[0] == x, a[1] == y and x! + y! = 10!.
+
+
+<hr>
+
+<b>Quesiton 10</b><br>
+10.    An array is called centered-15 if some consecutive sequence of elements of the array sum to 15 and this sequence is preceded and followed by the same number of elements.  For example 
+{3, 2, 10, 4, 1, 6, 9} is centered-15 because  the sequence 10, 4, 1 sums to 15 and the sequence is preceded by two elements (3, 2) and followed by two elements(6,9).
+
+Write a method called isCentered15 that returns 1 if its array argument is centered-15, otherwise it returns 0.
+
+the function prototype is
+   int isCentered15(int[ ] a)
+
+Examples
+<table>
+	<tr>
+		<th>if a is</th>
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{3, 2, 10, 4, 1, 6, 9}</td>
+		<td>1</td>
+		<td>
+			the sequence 10, 4, 1 sums to 15 and is preceded by 2 elements and followed by 2 elements. Note that there is 				another sequence that sums to 15 (6,9}. It is okay for the array to have more than one sequence that sums to 15 			as long as at least one of them is centered.
+		</td>
+	</tr>
+	<tr>
+		<td>{2, 10, 4, 1, 6, 9}</td>
+		<td>0</td>
+		<td>
+			(10, 4, 1) is preceded by one element but followed by two.  (9,6) is preceded by five elements but followed by 				none.Hence neither qualify as centered.
+		</td>
+	</tr>
+	<tr>
+		<td>{3, 2, 10, 4, 1, 6}</td>
+		<td></td>
+		<td>
+			(10, 4, 1) is preceded by two elements but followed by one. Note that the values 3, 2, 4, 6 sum to 15 but they 				are not consecutive.
+		</td>
+	</tr>
+	<tr>
+		<td>{1,1,8, 3, 1, 1}</td>
+		<td></td>
+		<td>The entire array sums to 15, hence the sequence is preceded by zero elements and followed by zero elements.</td>
+	</tr>
+	<tr>
+		<td>{9, 15, 6}</td>
+		<td>1</td>
+		<td>the sequence (15) is preceded by one element and followed by one element.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 2, 1, 1}</td>
+		<td>0</td>
+		<td>no sequence sums to 15.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 15 -1,-1}</td>
+		<td>1</td>
+		<td>
+			there are three different sequences that sum to 15, the entire array, (1, 15, -1) and (15). In this case they 				all are centered but the requirement is that just one of them has to be.
+		</td>
+	</tr>
+	
+</table>
+		
+		
+
+<hr>
 
