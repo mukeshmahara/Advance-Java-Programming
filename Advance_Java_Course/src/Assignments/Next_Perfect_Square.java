@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Assignments;
+
+import java.util.Scanner;
 
 /**
  *
@@ -23,16 +24,14 @@ class Counter{
         return num;
     }
 }
-public class Assignments {
-
+public class Next_Perfect_Square {
     
-    
-    public static void main(){
-        
+    public static void main(String[] args){
         Counter c = new Counter();
-        
-        
-        
-    
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number :");
+        int input = s.nextInt();
+        System.out.println("The next perfect square number after "+input+" is :"+c.next_Perfect_Square(input));
     }
+    
 }
