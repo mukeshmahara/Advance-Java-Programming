@@ -32,7 +32,7 @@ public class Question_9 {
         coord = new int[2];
     }
 
-    public int[] factorial() {
+    public int[] solve10() {
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
                 if ((fact(i) + fact(j)) == 3628800) {
@@ -57,7 +57,7 @@ public class Question_9 {
 
     public static void main(String[] args) {
         Question_9 _9 = new Question_9();
-        int[] coord = _9.factorial();
+        int[] coord = _9.solve10();
         System.out.println(coord[0] + " , " + coord[1]);
     }
 
