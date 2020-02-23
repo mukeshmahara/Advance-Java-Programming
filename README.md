@@ -110,7 +110,7 @@ the function signature is
 		<td>The length of the array is 5, but 5 does not equal n*(n+1)/2 for any value of n.</td>
 	</tr>
 </table>
-
+<hr>
 
 <b>Quesiton 3</b><br>
 An array is defined to be inertial if the following conditions hold:
@@ -183,7 +183,7 @@ the function signature is
 		<td>there is no odd value in the array.</td>
 	</tr>
 </table>
-
+<hr>
 <b>Quesiton 4</b><br>
 Define a square pair to be the tuple <x, y> where x and y are positive, non-zero integers, x<y and x + y is a perfect square. A perfect square is an integer whose square root is also an integer, e.g. 4, 9, 16 are perfect squares but 3, 10 and 17 are not. Write a function named countSquarePairs that takes an array and returns the number of square pairs that can be constructed from the elements in the array. For example, if the array is {11, 5, 4, 20} the function would return 3 because the only square pairs that can be constructed from those numbers are <5, 11>, 
 <5, 20> and <4, 5>.  You may assume that there exists a function named isPerfectSquare that returns 1 if its argument is a perfect square and 0 otherwise. E.G., isPerfectSquare(4) returns 1 and isPerfectSquare(8) returns 0.
@@ -212,7 +212,7 @@ Examples:
 		<td>The array must have at least 2 elements</td>
 	</tr>
 </table>
-
+<hr>
 <b>Quesiton 5</b><br>
 5.   A prime number is an integer that is divisible only by 1 and itself. A porcupine number is a prime number whose last digit is 9 and the next prime number that follows it also ends with the digit 9. For example 139 is a porcupine number because:
     a. it is prime
@@ -228,6 +228,7 @@ You may assume that a porcupine number greater than n exists.
 
 Also write a  function isPrime that returns 1 if its argument is prime, otherwise it returns 0. E.G., isPrime(7) returns 1 and isPrime(8) returns 0. 
 
+<hr>
 <b>Quesiton 6</b><br>
 6.   Consider the following algorithm
 	Start with a positive number n
@@ -278,4 +279,51 @@ Examples
 		<td>A Guthrie sequence must end with 1</td>
 	</tr>	
 </table>
+
+<hr>
+<b>Quesiton 7</b><br>
+7.    The Stanton measure of an array is computed as follows. Count the number of 1s in the array. Let this count be n. The Stanton measure is the number of times that n appears in the array. For example, the Stanton measure of {1, 4, 3, 2, 1, 2, 3, 2} is 3 because 1 occurs 2 times in the array and 2 occurs 3 times.
+
+Write a function named stantonMeasure that returns the Stanton measure of its array argument.
+
+the function prototype is
+	int stantonMeasure(int[ ] a)
+
+Examples
+<table>	
+	<tr>
+		<th>if a is</th>
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{1}</td>
+		<td>1</td>
+		<td>1 occurs 1 time, 1 occurs 1 time</td>
+	</tr>
+	<tr>
+		<td>{0}</td>
+		<td>1</td>
+		<td>1 occurs 0 times, 0 occurs 1 time</td>
+	</tr>
+	<tr>
+		<td>{3, 1, 1, 4}</td>
+		<td>0</td>
+		<td>1 occurs 2 times, 2 occurs 0 times</td>
+	</tr>
+	<tr>
+		<td>{1, 3, 1, 1, 3, 3, 2, 3, 3, 3, 4}</td>
+		<td>6</td>
+		<td>1 occurs 3 times, 3 occurs 6 times</td>
+	</tr>
+	<tr>
+		<td>{}</td>
+		<td>0</td>
+		<td>1 occurs 0 times, 0 occurs 0 times</td>
+	</tr>
+
+
+</table>
+
+
 
