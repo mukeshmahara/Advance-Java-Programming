@@ -450,4 +450,521 @@ Examples
 		
 
 <hr>
+<b>Quesiton 11</b><br>
+11. A perfect number is one that is the sum of its factors, excluding itself. The 1st perfect number is 6 because 6 = 1 + 2 + 3. The 2nd perfect number is 28 which equals 1 + 2 + 4 + 7 + 14. The third is 496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248. In each case, the number is the sum of all its factors excluding itself. 
+
+Write a method named henry that takes two integer arguments, i and j and returns the sum of the ith and jth perfect numbers. So for example, henry (1, 3) should return 502 because 6 is the 1st perfect number and 496 is the 3rd perfect number and 6 + 496 = 502.
+
+The function signature is
+    int henry (int i, int j)	
+    
+<hr>
+
+
+<b>Quesiton 12</b><br>
+12.   An array is defined to be n-unique if exactly one pair of its elements sum to n. For example, the array {2, 7,  3, 4} is 5-unique because only a[0] and a[2] sum to 5. But the array {2, 3, 3, 7} is not 5-unique because a[0] + a[1] = 5 and a[0] + a[2] = 5.  
+
+Write a function named isNUnique that returns 1 if its integer array argument is n-unique, otherwise it returns 0. So isNUnique(new int[ ]{2, 7, 3, 4}, 5) should return 1 and 
+isNUnique(new int[] {2, 3, 3, 7}, 5) should return 0.
+
+the function signature is
+    int isNUnique(int[ ] a, int n)
+
+Examples
+<table>
+	<tr>
+		<th>If a is</th>
+		<th>and n is</th>
+		<th>returns</th>
+		<th>Reason</th>
+	</tr>
+	<tr>
+		<td>{7, 3, 3, 2, 4}</td>
+		<td>6</td>
+		<td>0</td>
+		<td>because a[1]+a[2] == 6 and a[3]+a[4] also == 6.</td>
+	</tr>
+	<tr>
+		<td>{7, 3, 3, 2, 4}</td>
+		<td>10</td>
+		<td>0</td>
+		<td>because a[0]+a[1] == 10 and a[0] + a[2] also == 10</td>
+	</tr>
+	<tr>
+		<td>{7, 3, 3, 2, 4}</td>
+		<td>11</td>
+		<td>1</td>
+		<td>because only a[0] + a[4] sums to 11</td>
+	</tr>
+	<tr>
+		<td>{7, 3, 3, 2, 4}</td>
+		<td>8</td>
+		<td>0</td>
+		<td>
+			because no pair of elements sum to 8. (Note that a[1]+a[2]+a[3] do sum to 8 but the requirement is that two 				elements sum to 8.)
+		</td>
+	</tr>
+	<tr>
+		<td>{7, 3, 3, 2, 4}</td>
+		<td>4</td>
+		<td>0</td>
+		<td>
+			no pair of elements sum to 4. (Note that the a[4]==4, but the requirement is that two elements have to sum to 				4.)
+		</td>
+	</tr>
+	<tr>
+		<td>{1}</td>
+		<td>anything</td>
+		<td>0</td>
+		<td>array must have at least 2 elements</td>
+	</tr>
+</table>	
+	
+   
+<hr>
+<b>Quesiton 13</b><br>
+
+13. Write a function named isSquare that returns 1 if its integer argument is a square of some integer, otherwise it returns 0. Your function must not use any function or method (e.g. sqrt) that comes with a runtime library or class library! 
+
+The signature of the function is
+int isSquare(int n) 
+
+Examples: 
+<table>
+	<tr>
+		<th>If a is</th>
+		<th>Returns</th>
+		<th>Reason</th>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>because 0 = 0*0</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>0</td>
+		<td>because the square root of 8 is not an integer.</td>
+	</tr>
+	<tr>
+		<td>-4</td>
+		<td>0</td>
+		<td>because there is no integer that when squared equals -4. (note, -2 squared is 4 not -4)</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>1</td>
+		<td>because 25 = 5*5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1</td>
+		<td>because 4 = 2*2</td>
+	</tr>
+</table>
+
+
+
+
+  
+<hr>
+<b>Quesiton 14</b><br>
+14. Define a stacked number to be a number that is the sum of the first n positive integers for some n. The first 5 stacked numbers are
+	1 = 1
+	3 = 1 + 2
+	6 = 1 + 2 + 3
+	10 = 1 + 2 + 3+ 4
+	15 = 1 + 2 + 3 + 4 + 5
+
+Note that from the above we can deduce that 7, 8, and 9 are not stacked numbers because they cannot be the sum of any sequence of positive integers that start at 1.
+Write a function named isStacked that returns 1 if its argument is stacked. Otherwise it returns 0. Its signature is:
+	int isStacked(int n);
+So for example, isStacked(10) should return 1 and isStacked(7) should return 0.
+
+
+
+ 
+<hr>
+<b>Quesiton 14</b><br>
+14. An array is called vanilla if all its elements are made up of the same digit. For example {1, 1, 11, 1111, 1111111} is a vanilla array because all its elements use only the digit 1. However, the array {11, 101, 1111, 11111} is not a vanilla array because its elements use the digits 0 and 1. Write a method called isVanilla that returns 1 if its argument is a vanilla array. Otherwise it returns 0.
+
+the function signature is
+   int isVanilla(int[ ] a)
+
+Example
+<table>
+	<tr>
+		<th>if a is</th>
+		<th>Return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{1}</td>
+		<td>1</td>
+		<td>all elements use only digit 1.</td>
+	</tr>
+	<tr>
+		<td>{11, 22, 13, 34, 125}</td>
+		<td>0</td>
+		<td>Elements used 5 different digits.</td>
+	</tr>
+	<tr>
+		<td>{9, 999, 99999, -9999}</td>
+		<td>1</td>
+		<td>Only digit 9 is used by all elements. Note that negative numbers are okay.</td>
+	</tr>
+	<tr>
+		<td>{ }</td>
+		<td>1</td>
+		<td>There is no counterexample to the hypothesis that all elements use the same digit.</td>
+	</tr>
+</table>
+
+<hr>
+<b>Quesiton 15</b><br>
+
+15. Define an array to be trivalent if all its elements are one of three different values. For example, {22, 19, 10, 10, 19, 22, 22, 10} is trivalent because all elements are either 10, 22, or 19. However, the array {1, 2, 2, 2, 2, 2, 2} is not trivalent because it contains only two different values (1, 2). The array {2, 2, 3, 3, 3, 3, 2, 41, 65} is not trivalent because it contains four different values (2, 3, 41, 65). 
+
+Write a function named isTrivalent that returns 1 if its array argument is trivalent, otherwise it returns 0.
+
+the function signature is
+   int isTrivalent (int[ ] a)
+Hint: Remember that the elements of the array can be any value, so be careful how you initialize your local variables! For example using -1 to initialize a variable won’t work because -1 might be one of the values in the array.
+
+Examples
+<table>
+	<tr>
+		<th>if a is</th>
+		<th>returns</th>
+		<th>Reason</th>
+	</tr>
+	<tr>
+		<td>{ 2147483647, -1, -1,-2147483648}</td>
+		<td>1</td>
+		<td>
+			Again only three different values. Note that the value of a[0] is the maximum integer and the value of a[3] is 				the minimum integer so you can’t use those to initialize local variables.
+		</td>
+	</tr>
+	<tr>
+		<td>{}</td>
+		<td>0</td>
+		<td>There are no elements</td>
+	</tr>
+	<tr>
+		<td>{-1, 0, 1, 0, 0, 0}</td>
+		<td>1</td>
+		<td>All elements have one of three values (0, -1, 1)</td>
+	</tr>
+</table>
+
+
+<hr>
+<b>Quesiton 16</b><br>
+
+16.  An integer array is defined to be sequentially-bounded if it is in ascending order and each value, n,  in the array  occurs less than n times in the array. So {2, 3, 3, 99, 99, 99, 99, 99} is sequentially-bounded because it is in ascending order and the value 2 occurs less than 2 times, the value 3 occurs less than 3 times and the value 99 occurs less than 99 times. On the other hand, the array {1, 2, 3} is not sequentially-bounded because the value 1 does not occur < 1 times. The array {2, 3, 3, 3, 3} is not sequentially-bounded because the maximum allowable occurrences of 3 is 2 but 3 occurs 4 times. The array {12, 12, 9} is not sequentially-bounded because it is not in ascending order.
+
+Write a function named isSequentiallyBounded that returns 1 if its array argument is sequentially-bounded, otherwise it returns 0.
+• the function signature is int isSequentiallyBounded(int[ ] a)
+
+Examples
+<table>
+	<tr>
+		<th>if a is</th>
+		<th>return</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{0, 1}</td>
+		<td>0</td>
+		<td>the value 0 has to occur less than 0 times, but it doesn’t</td>
+	</tr>
+	<tr>
+		<td>{-1, 2}</td>
+		<td>0</td>
+		<td>if array contains a negative number, return 0.</td>
+	</tr>
+	<tr>
+		<td>{}</td>
+		<td>1</td>
+		<td>since there are no values, there are none that can fail the test.</td>
+	</tr>
+	<tr>
+		<td>{5, 5, 5, 5}</td>
+		<td>1</td>
+		<td>5 occurs less than 5 times</td>
+	</tr>
+	<tr>
+		<td>array is not in ascending order.</td>
+		<td>0</td>
+		<td>{5, 5, 5, 2, 5} </td>
+	</tr>
+</table>
+
+<hr>
+<b>Quesiton 17</b><br>
+17 . Define an array to be packed if all its values are positive, each value n appears n times and all equal values are in consecutive locations. So for example, {2, 2, 3, 3, 3} is packed because 2 appears twice and 3 appears three times. But {2, 3, 2, 3, 3} is not packed because the 2s are not in consecutive locations. And {2, 2, 2, 3, 3, 3} is not packed because 2 appears three times. 
+Write a method named isPacked that returns 1 if its array argument is packed, otherwise it returns 0. You may assume that the array is not null 
+the function signature is
+int isPacked(int[ ] a) 
+Examples
+<table>
+	{2, 2, 1}	1	because there are two 2s and one 1 and equal values appear in consecutive locations.
+{2, 2, 1, 2, 2}	0	Because there are four 2s (doesn't matter that they are in groups of 2)
+{4, 4, 4, 4, 1, 2, 2, 3, 3, 3}	1	because 4 occurs four times, 3 appears three times, 2 appears two times and 1 appears once and equal values are in consecutive locations.
+<table>
+	<tr>
+		<th>a is </th>
+		<th>then function returns</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{7, 7, 7, 7, 7, 7, 7, 1}</td>
+		<td>1</td>
+		<td>because 7 occurs seven times and 1 occurs once.</td>
+	</tr>
+	<tr>
+		<td>{7, 7, 7, 7, 1, 7, 7, 7}</td>
+		<td>0</td>
+		<td>because the 7s are not in consecutive locations.</td>
+	</tr>
+	<tr>
+		<td>{7, 7, 7, 7, 7, 7, 7}</td>
+		<td>1</td>
+		<td>because 7 occurs seven times</td>
+	</tr>
+	<tr>
+		<td>{}</td>
+		<td>1</td>
+		<td>because there is no value that appears the wrong number of times</td>
+	</tr>
+	<tr>
+		<td>{1, 2, 1}</td>
+		<td>0</td>
+		<td>because there are too many 1s</td>
+	</tr>
+	<tr>
+		<td>{2, 1, 1}</td>
+		<td>0</td>
+		<td>because there are too many 1s</td>
+	</tr>
+	<tr>
+		<td>{-3, -3, -3}</td>
+		<td>0</td>
+		<td>because not all values are positive</td>
+	</tr>
+	<tr>
+		<td>{0, 2, 2}</td>
+		<td>0</td>
+		<td>because 0 occurs one time, not zero times.</td>
+	</tr>
+	<tr>
+		<td>{2, 1, 2}</td>
+		<td>0</td>
+		<td>because the 2s are not in consec
+</td>
+	</tr>
+</table> 
+utive locations
+Hint: Make sure that your solution handles all the above examples correctly!
+
+
+
+<hr>
+<b>Quesiton 18</b><br>
+18.  Write a method named getExponent(n, p) that returns the largest exponent x such that px evenly divides n. If p is <= 1 the method should return -1.
+
+For example, getExponent(162, 3) returns 4 because 162 = 21 * 34, therefore the value of x here is 4. 
+
+The method signature is
+int getExponent(int n, int p)
+
+Examples: 
+<table>
+	<tr>
+		<th>if n is</th>
+		<th>if p is</th>
+		<th>return</th>
+		<th>Because</th>
+	</tr>
+	<tr>
+		<td>27</td>
+		<td>3</td>
+		<td>3</td>
+		<td>3<sup>3</sup> divides 27 evenly but 3<sup>4</sup> does not.</td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>30</td>
+		<td>0</td>
+		<td>3<sup>0</sup> divides 28 evenly but 3<sup>1</sup> does not.</td>
+	</tr>
+	<tr>
+		<td>280</td>
+		<td>7</td>
+		<td>1</td>
+		<td>7<sup>1</sup> divides 280 evenly but 7<sup>2</sup> does not.</td>
+	</tr>
+	<tr>
+		<td>-250</td>
+		<td>5</td>
+		<td>3</td>
+		<td>5<sup>3</sup> divides -250 evenly but 5<sup>4</sup>does not.</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>1</td>
+		<td>-1</td>
+		<td>if p <=1 the function returns -1.</td>
+	</tr>
+	<tr>
+		<td>128</td>
+		<td>4</td>
+		<td>3</td>
+		<td>4<sup>3</sup> divides 128 evenly but 4<sup>4</sup> does not.</td>
+	</tr>
+</table>
+	
+
+
+
+<hr>
+<b>Quesiton 19</b><br>
+19. Define an array to be a 121 array if all its elements are either 1 or 2 and it begins with one or more 1s followed by a one or more 2s and then ends with the same number of 1s that it begins with. Write a method named is121Array that returns 1 if its array argument is a 121 array, otherwise, it returns 0.
+
+the function signature is
+int is121Array(int[ ] a)
+
+Examples
+<table>
+	<tr>
+		<th>a is</th>
+		<th>then function returns</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{1, 2, 1}</td>
+		<td>1</td>
+		<td>
+			because the same number of 1s are at the beginning and end of the array and there is at least one 2 in between 				them.
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 2, 2, 1, 1}</td>
+		<td>1</td>
+		<td>
+			because the same number of 1s are at the beginning and end of the array and there is at least one 2 in between 				them.		
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 2, 2, 1, 1, 1}</td>
+		<td>0</td>
+		<td>Because the number of 1s at the end does not equal the number of 1s at the beginning.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 1, 2, 1, 1}</td>
+		<td>0</td>
+		<td>Because the middle does not contain only 2s.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 2, 2, 2, 1, 1, 1, 3}</td>
+		<td>0</td>
+		<td>Because the array contains a number other than 1 and 2.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 1, 1, 1}</td>
+		<td>0</td>
+		<td>Because the array does not contain any 2s</td>
+	</tr>
+	<tr>
+		<td>{2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1}</td>
+		<td>0</td>
+		<td>
+			Because the first element of the array is not a 1.
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 2, 2, 2, 1, 1, 2, 2}</td>
+		<td>0</td>
+		<td>Because the last element of the array is not a 1.</td>
+	</tr>
+	<tr>
+		<td>{2, 2, 2}</td>
+		<td>0</td>
+		<td>Because there are no 1s in the array.</td>
+	</tr>
+</table>
+
+
+
+<hr>
+<b>Quesiton 20</b><br>
+
+20.  Define an array to be a 121 array if all its elements are either 1 or 2 and it begins with one or more 1s followed by a one or more 2s and then ends with the same number of 1s that it begins with. Write a method named is121Array that returns 1 if its array argument is a 121 array, otherwise, it returns 0.
+
+the function signature is
+int is121Array(int[ ] a)
+
+Examples
+<table>
+	<tr>
+		<th>a is</th>
+		<th>then function returns</th>
+		<th>reason</th>
+	</tr>
+	<tr>
+		<td>{1, 2, 1}</td>
+		<td></td>
+		<td>
+			because the same number of 1s are at the beginning and end of the array and there is at least one 2 in between 				them.
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 2, 2, 1, 1}</td>
+		<td>1</td>
+		<td>
+			because the same number of 1s are at the beginning and end of the array and there is at least one 2 in between 				them.
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 2, 2, 1, 1, 1}</td>
+		<td>0</td>
+		<td>
+			Because the number of 1s at the end does not equal the number of 1s at the beginning.
+		</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 2, 1, 2, 1, 1}</td>
+		<td>0</td>
+		<td>Because the middle does not contain only 2s.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 2, 2, 2, 1, 1, 1, 3}</td>
+		<td>0</td>
+		<td>Because the array contains a number other than 1 and 2.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 1, 1, 1}</td>
+		<td>0</td>
+		<td>Because the array does not contain any 2s</td>
+	</tr>
+	<tr>
+		<td>{2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1}</td>
+		<td>0</td>
+		<td>Because the first element of the array is not a 1.</td>
+	</tr>
+	<tr>
+		<td>{1, 1, 1, 2, 2, 2, 1, 1, 2, 2}</td>
+		<td>0</td>
+		<td>Because the last element of the array is not a 1.</td>
+	</tr>
+	<tr>
+		<td>{2,2,2}</td>
+		<td>0</td>
+		<td>Because there are no 1s in the array.</td>
+	</tr>
+</table>
+
+<hr>
+<hr>
+
 
