@@ -32,6 +32,7 @@ public class Next_Perfect_Square {
         System.out.println("Enter a number :");
         int input = s.nextInt();
         System.out.println("The next perfect square number after "+input+" is :"+c.next_Perfect_Square(input));
+        
     }
     
 }
