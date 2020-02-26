@@ -5,10 +5,32 @@
  */
 package Assignments;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Dell
  */
 public class Question_13 {
-    
+
+    int isSquare(int n) {
+        int lastNum = n%10;
+        if (lastNum ==0 || lastNum ==1 || lastNum ==4 || lastNum ==5 || lastNum ==6 || lastNum ==9) {
+            
+            return 1;
+            
+        } else  {
+            return 0;
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Question_13 q = new Question_13();
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int input = s.nextInt();
+
+        System.out.println("Retrun :"+q.isSquare(input));
+    }
 }
