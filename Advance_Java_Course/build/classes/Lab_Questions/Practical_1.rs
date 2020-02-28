@@ -1,2 +1,0 @@
-Lab_Questions.Circle
-Lab_Questions.Practical_1
