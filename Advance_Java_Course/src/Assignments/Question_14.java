@@ -12,6 +12,10 @@ import java.util.Scanner;
  * @author Dell
  */
 public class Question_14 {
+    
+    public int isVanilla(int[] a){
+        return 1;
+    }
 
     public int isStacked(int num) {
         int sum = 0;
