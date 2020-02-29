@@ -6,6 +6,10 @@
 package SwingTutorials;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,7 +29,7 @@ public class Registration_form {
     JButton send;
 
     Registration_form() {
-        JFrame form = new JFrame();
+        JFrame form = new JFrame("Registration Form");
 
         //All the labels in the form here
         fname = new JLabel("First Name");
@@ -99,8 +103,7 @@ public class Registration_form {
         rbother = new JRadioButton("other");
         rbother.setBounds(450, 300, 65, 30);
         form.add(rbother);
-        
-        
+
         txtdob = new JTextField("Date of Birth");
         txtdob.setBounds(250, 350, 250, 30);
         form.add(txtdob);
@@ -119,6 +122,18 @@ public class Registration_form {
         send.setBackground(Color.green);
         form.add(send);
 
+        JLabel txt = new JLabel("");
+        txt.setBounds(300, 530, 200, 30);
+        form.add(txt);
+        send.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                txt.setText("Registred sucessfully");
+            }
+
+           
+        });
+        
+        
         //cancel button here
         JButton cancel = new JButton("Cancel");
         cancel.setBounds(340, 500, 80, 30);
@@ -133,6 +148,9 @@ public class Registration_form {
     public static void main(String[] args) {
         Registration_form rs = new Registration_form();
 
+        
+        
+        
     }
 
 }
