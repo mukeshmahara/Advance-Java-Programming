@@ -124,7 +124,9 @@ public class Registration_form {
 
         JLabel txt = new JLabel("");
         txt.setBounds(300, 530, 200, 30);
+        txt.setForeground(Color.green);
         form.add(txt);
+        
         send.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 txt.setText("Registred sucessfully");
