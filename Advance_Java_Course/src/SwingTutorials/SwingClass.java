@@ -5,7 +5,17 @@
  */
 package SwingTutorials;
 
-import javax.swing.*;
+//import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 
 
 /**
@@ -15,6 +25,7 @@ import javax.swing.*;
 
 
 public class SwingClass {
+    
     //Frame
     JFrame f;
     
@@ -24,8 +35,11 @@ public class SwingClass {
     JRadioButton rbmale,rbfemale,rbother;
     JComboBox<String> jcbsem;
     JCheckBox jcbc,jcbjava;
+    
+    JButton jsubmit;
 
     SwingClass() {
+        
         f = new JFrame();
         //nameLabel
         lblname = new JLabel("Username");
@@ -67,78 +81,26 @@ public class SwingClass {
         rbother = new JRadioButton("other");
         rbother.setBounds(450, 250, 100, 30);
         f.add(rbother);
-
+        
+        
+        jsubmit = new JButton("Submit");
+        jsubmit.setBounds(300,300,80,30);
+        f.add(jsubmit);
+        
+        JButton jcancel = new JButton("cancel");
+        jcancel.setBounds(390,300,80,30);
+        f.add(jcancel);
         
         f.setSize(700,700);
         f.setLayout(null);
         f.setVisible(true);
     
     }
-
-    public JFrame getF() {
-        return f;
-    }
-
-    public JLabel getLblname() {
-        return lblname;
-    }
-
-    public JLabel getLblpasword() {
-        return lblpasword;
-    }
-
-    public JLabel getLblgender() {
-        return lblgender;
-    }
-
-    public JLabel getLblsem() {
-        return lblsem;
-    }
-
-    public JLabel getLblmajorsubject() {
-        return lblmajorsubject;
-    }
-
-    public JTextField getTxtname() {
-        return txtname;
-    }
-
-    public JTextField getTxtpass() {
-        return txtpass;
-    }
-
-    public JPasswordField getJpass() {
-        return jpass;
-    }
-
-    public JRadioButton getRbmale() {
-        return rbmale;
-    }
-
-    public JRadioButton getRbfemale() {
-        return rbfemale;
-    }
-
-    public JRadioButton getRbother() {
-        return rbother;
-    }
-
-    public JComboBox<String> getJcbsem() {
-        return jcbsem;
-    }
-
-    public JCheckBox getJcbc() {
-        return jcbc;
-    }
-
-    public JCheckBox getJcbjava() {
-        return jcbjava;
-    }
     
     
     public static void main(String[] args){
         SwingClass sq =new SwingClass();
-        System.out.println(""+sq.txtpass);
+        
     }
     
 }
