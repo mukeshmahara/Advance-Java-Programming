@@ -8,8 +8,6 @@ package SwingTutorials;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -122,17 +120,38 @@ public class Registration_form {
         send.setBackground(Color.green);
         form.add(send);
 
-        JLabel txt = new JLabel("");
+        
+        //Action event and label added to send button
+        JLabel txt = new JLabel();
         txt.setBounds(300, 530, 200, 30);
         txt.setForeground(Color.green);
         form.add(txt);
         
-        send.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                txt.setText("Registred sucessfully");
+//         send.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                txt.setText("Registred sucessfully");
+//            }
+        
+        send.addActionListener((ActionEvent e) -> {
+            
+            String fname = txtfname.getText();
+            String lname = txtlname.getText();
+            String address = txtaddress.getText();
+            String email = txtemail.getText();
+            String dob = txtdob.getText();
+            String password = txtpassword.getText();
+            String city = txtcity.getText();
+            String country = txtcountry.getText();
+            
+            
+            System.out.println(fname+lname);
+            
+            if (fname==lname){
+                txt.setText("invalid name!!");
+            } 
+            else {
+                txt.setText("erro r ");
             }
-
-           
         });
         
         
