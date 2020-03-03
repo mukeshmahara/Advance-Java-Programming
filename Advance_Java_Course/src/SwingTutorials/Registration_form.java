@@ -8,6 +8,9 @@ package SwingTutorials;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 
+import SwingTutorials.DbConnection;
+
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,6 +30,7 @@ public class Registration_form {
     JButton send;
 
     Registration_form() {
+
         JFrame form = new JFrame("Registration Form");
 
         //All the labels in the form here
@@ -120,20 +124,18 @@ public class Registration_form {
         send.setBackground(Color.green);
         form.add(send);
 
-        
         //Action event and label added to send button
         JLabel txt = new JLabel();
         txt.setBounds(300, 530, 200, 30);
         txt.setForeground(Color.green);
         form.add(txt);
-        
+
 //         send.addActionListener(new ActionListener() {
 //            public void actionPerformed(ActionEvent e) {
 //                txt.setText("Registred sucessfully");
 //            }
-        
         send.addActionListener((ActionEvent e) -> {
-            
+
             String fname = txtfname.getText();
             String lname = txtlname.getText();
             String address = txtaddress.getText();
@@ -142,19 +144,11 @@ public class Registration_form {
             String password = txtpassword.getText();
             String city = txtcity.getText();
             String country = txtcountry.getText();
-            
-            
-            System.out.println(fname+lname);
-            
-            if (fname==lname){
-                txt.setText("invalid name!!");
-            } 
-            else {
-                txt.setText("erro r ");
-            }
+
+            System.out.println(fname + lname);
+
         });
-        
-        
+
         //cancel button here
         JButton cancel = new JButton("Cancel");
         cancel.setBounds(340, 500, 80, 30);
@@ -166,12 +160,20 @@ public class Registration_form {
         form.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        Registration_form rs = new Registration_form();
+    
 
+    public void insertQuery() {
+
+    }
+
+    public static void main(String[] args) {
         
         
+        DbConnection startcon;
+        startcon= new DbConnection(); 
         
+        Registration_form newForm = new Registration_form();
+
     }
 
 }
