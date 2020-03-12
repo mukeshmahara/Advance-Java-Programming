@@ -25,7 +25,7 @@ public class MyServerSocket {
 
         Socket s = ss.accept();
 
-        System.out.println("Server is connected");
+        System.out.println("Server connected");
 
         //reading from the keyword
         BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
@@ -41,6 +41,7 @@ public class MyServerSocket {
         String receveiveMessage, sendMessage;
 
         while (true) {
+            
             if ((receveiveMessage = receiveRead.readLine()) != null) {
                 System.out.println("Client Says : " + receveiveMessage);
 
