@@ -20,12 +20,12 @@ public class ClientSocket {
         //reading form the keyboard
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-//            Sending to the server
+        //Sending to the server
         OutputStream ostream = s.getOutputStream();
 
         PrintWriter pw = new PrintWriter(ostream, true);
 
-                    //receiving from the server
+        //receiving from the server
         InputStream istream = s.getInputStream();
 
         BufferedReader recieveRead = new BufferedReader(new InputStreamReader(istream));
