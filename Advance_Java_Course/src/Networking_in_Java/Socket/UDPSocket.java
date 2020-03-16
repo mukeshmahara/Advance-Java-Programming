@@ -20,9 +20,11 @@ public class UDPSocket {
 
         //create the DatagramSocket to create the UDP Socket
         DatagramSocket client_socket = new DatagramSocket();
+
         //to get the ip address
         InetAddress IP_add = InetAddress.getByName("localhost");
         System.out.println(IP_add);
+        
         //receiving a data from the client
         byte in_data[] = new byte[1024];
         //creating buffer for send the data
