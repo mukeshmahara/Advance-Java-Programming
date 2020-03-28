@@ -18,12 +18,24 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MeroServlet extends HttpServlet {
     
-     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/thml");
+     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/thml");
 //        response.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        PrintWriter out = response.getWriter();
+        
+        String username = request.getParameter("uname");
+        out.println("Welcome to  MeroServlet using GET Method ");
+        out.println("The user name is :"+username);
 
-        out.println("<h4>Welcome to Regester Servelet</h4>");
+    }
+      protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/thml");
+//        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        
+        String username = request.getParameter("uname");
+        out.println("Welcome to  MeroServlet using POST method");
+        out.println("The user name is :"+username);
 
     }
     
