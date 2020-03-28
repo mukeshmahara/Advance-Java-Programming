@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1>Welcome Page</h1></div>
+        <!--here you can use GET of POST method both method will be handeled by our MeroServlet resciding inside the MeroApp.com.servlets Package-->
+        <!--here i have used the POST method to send the data in MeroServlet-->
+        
+        <form action="MeroServlet" method="POST">
+            
+            Username:<input type="Text" name="uname" placeholder="Enter user name"/>
+            <input type="submit" value="Send"/>
+            
+        </form>
+    </body>
+</html>
