@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    
     <welcome-file-list>
-        <welcome-file>welcome.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     
     <servlet>
@@ -11,18 +10,18 @@
     </servlet>
     
     <servlet>
-        <servlet-name>MyServlet</servlet-name>
-        <servlet-class>MeroApp.com.servlets.MyServlet</servlet-class>
+        <servlet-name>Question_2_Servlet</servlet-name>
+        <servlet-class>MeroApp.com.servlets.Question_2_Servlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
         <servlet-name>meroservlet</servlet-name>
-        <url-pattern>/Welcome</url-pattern>
+        <url-pattern>/MeroServlet</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
-        <servlet-name>MyServlet</servlet-name>
-        <url-pattern>/MyServlet</url-pattern>
+        <servlet-name>Question_2_Servlet</servlet-name>
+        <url-pattern>/Question_2_Servlet</url-pattern>
     </servlet-mapping>
     
     <session-config>
@@ -30,4 +29,5 @@
             30
         </session-timeout>
     </session-config>
+
 </web-app>
