@@ -3,31 +3,49 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    
     <servlet>
         <servlet-name>meroservlet</servlet-name>
         <servlet-class>MeroApp.com.servlets.MeroServlet</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>Question_2_Servlet</servlet-name>
         <servlet-class>MeroApp.com.servlets.Question_2_Servlet</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>Q3Servlet</servlet-name>
+        <servlet-class>MeroApp.com.servlets.Q3Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Q4Servlet</servlet-name>
+        <servlet-class>MeroApp.com.servlets.Q4Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Q5Registration</servlet-name>
+        <servlet-class>MeroApp.com.servlets.Q5Registration</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>meroservlet</servlet-name>
         <url-pattern>/MeroServlet</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>Question_2_Servlet</servlet-name>
         <url-pattern>/Question_2_Servlet</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>Q3Servlet</servlet-name>
+        <url-pattern>/Q3Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Q4Servlet</servlet-name>
+        <url-pattern>/Q4Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Q5Registration</servlet-name>
+        <url-pattern>/Q5Registration</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-
 </web-app>
