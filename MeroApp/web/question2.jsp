@@ -17,7 +17,7 @@
         
         <div class="container ">
             <h1>Question 2</h1>
-            <div class="card">
+            <div class="card justify-content center">
 
                 <form method="GET" action="Question_2_Servlet" class="form-group">
                     <div class="p-3">
