@@ -27,6 +27,10 @@
         <servlet-name>Q6Servlet</servlet-name>
         <servlet-class>MeroApp.com.servlets.Q6Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>MeroApp.com.servlets.Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>meroservlet</servlet-name>
         <url-pattern>/MeroServlet</url-pattern>
@@ -50,6 +54,10 @@
     <servlet-mapping>
         <servlet-name>Q6Servlet</servlet-name>
         <url-pattern>/Q6Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
