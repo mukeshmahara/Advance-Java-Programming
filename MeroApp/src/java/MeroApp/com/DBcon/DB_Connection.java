@@ -34,7 +34,7 @@ public class DB_Connection {
     }
 
     public static void main(String[] arg) {
-        DB_Connection c=new DB_Connection();
+        DB_Connection c = new DB_Connection();
         c.getCon();
     }
 }
