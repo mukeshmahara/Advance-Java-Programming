@@ -17,12 +17,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>MYSQL and JDBC</title>
     </head>
+    
     <body>
         <form method="POST" action="Q6Servlet">
             <h1>MYSQL Database Connection Using JDBC</h1>
-            <input type="number" name="rollno" placeholder="Roll_number"/>
-            <input type="text" name="username " placeholder="username"/>
-
+            <input type="number" name="roll_no" placeholder="Roll_number"/>
+            <input type="text" name="uname" placeholder="username"/>
             <input type="text" name="address" placeholder="address"/>
             <input type="email" name="email" placeholder="Email"/>
             <input type="text" name="faculty" placeholder="Faculty"/>
