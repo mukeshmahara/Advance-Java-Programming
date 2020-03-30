@@ -28,6 +28,7 @@ public class MeroServlet extends HttpServlet {
         out.println("The user name is :"+username);
 
     }
+     
       protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/thml");
 //        response.setContentType("text/html");
