@@ -5,7 +5,8 @@
  */
 package MeroApp.com.servlets;
 
-import MeroApp.com.DBcon.DB_Con;
+import MeroApp.com.DBcon.DB_Connection;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -34,22 +35,7 @@ public class Q6Servlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    Connection con = null;
 
-    public Connection getCon() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-
-            DriverManager.getConnection("jdbc:mysql://localhost:3306/advancejava", "root", "password");
-
-        } catch (SQLException ex) {
-            Logger.getLogger(DB_Con.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DB_Con.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return con;
-    }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -59,21 +45,27 @@ public class Q6Servlet extends HttpServlet {
 
             out.println("<h1>Servlet Q6Servlet at " + request.getContextPath() + "</h1>");
 
-            int roll_no = Integer.parseInt(request.getParameter("rollno"));
-            String name = request.getParameter("username");
+            int roll_no = Integer.parseInt(request.getParameter("roll_no"));
+            String name = request.getParameter("uname");
             String address = request.getParameter("address");
             String email = request.getParameter("email");
             String faculty = request.getParameter("faculty");
             String date_of_admission = request.getParameter("doa");
 
-            DB_Con DB = new DB_Con();
-
-            Connection con = DB.getCon();
-
-            Statement stmt = con.createStatement();
-            stmt.executeUpdate("insert into student values('" + roll_no + "','" + name + "','" + address + "','" + email + "','" + faculty + "','" + date_of_admission + "')");
+            
+            DB_Connection DB = new DB_Connection();
+            Connection conn = DB.getCon();
+            Statement stmt = conn.createStatement();
+            
+//            String sql ="insert into student values('" + roll_no + "','" + name + "','" + address + "','" + email + "','" + faculty + "','" + date_of_admission + "')";
+            
+            stmt.executeUpdate("insert into student values('"+roll_no+"','"+name+"','"+address+"','"+email+"','"+faculty+"','"+date_of_admission+"')");
+        
+//           conn.setAutoCommit(false);
             out.println("Recorded inserted sucessfullty");
+        
         } catch (SQLException ex) {
+            out.println(ex);
             Logger.getLogger(Q6Servlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -118,4 +110,7 @@ public class Q6Servlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
+    
+       
+    }
+    
