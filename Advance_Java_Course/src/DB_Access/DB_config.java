@@ -27,7 +27,7 @@ public class DB_config {
             Statement stmt = con.createStatement();
 
         //step4 execute query  
-            ResultSet rs = stmt.executeQuery("select * from countries");
+            ResultSet rs = stmt.executeQuery("select * from tab ");
             System.out.println("Country_id\t"+"Country_name\t\t"+"Region ID");
             while (rs.next()) {
                 
