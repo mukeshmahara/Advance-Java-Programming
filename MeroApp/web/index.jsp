@@ -13,6 +13,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        <form method="GET" action="MeroServlet">
+            <h1>User Name</h1>
+            <div>
+                <label for="username" name="uname">Username</label>
+                <input type="text" name="uname" placeholder="username" />
+
+
+                <input type="submit" value="send"/>
+            </div>
+        </form>
     </body>
 </html>
