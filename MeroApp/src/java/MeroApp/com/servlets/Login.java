@@ -25,8 +25,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author Dell
  */
 public class Login extends HttpServlet {
-    
-    int count_id=1;
+
+    int count_id = 1;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -42,42 +43,53 @@ public class Login extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-            
+
             out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
-            
+
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            
+
             DB_Connection DB = new DB_Connection();
             Connection con = DB.getCon();
-            
+
             Statement stmt = con.createStatement();
-            
-            
+
             count_id++;
-            String insert_sql = "insert into credentials values('"+count_id+"','"+username+"','"+password+"')";
-            String unameSql = "select user_name from credentials where user_name='"+username+"' ";
-            String passSql = "select user_password from credentials where user_password='"+password+"' ";
-            
-            ResultSet dbuname = stmt.executeQuery(unameSql);
-            
-            out.println(dbuname);
-            ResultSet dbpass = stmt.executeQuery(passSql);
-            
+//            String insert_sql = "insert into credentials values('" + count_id + "','" + username + "','" + password + "')";
+            String credentials = "select user_name, user_password from credentials where user_name='" + username + "' and user_password='" + password + "' ";
+
+            ResultSet cred = stmt.executeQuery(credentials);
+
+//            out.println(cred.);
+            if (cred.first() || cred.next()) {
+
+                String user = cred.getString("user_name");
+                String pass = cred.getString("user_password");
+
+                if (password.equals(pass) && username.equals(user)) {
+                    out.println("<h1>Welcome, " +username+"</h1>");
+
+//                    out.println("<table border='1' >"
+//                            + "<tr>"
+//                            + "<td>username</td>"
+//                            + "<td>password</td>"
+//                            + "</th>"
+//                            + "</tr>"
+//                            + "<td>" + cred.getString(1) + "</td>"
+//                            + "<td>" + cred.getString(2) + "</td>"
+//                            + "</table>"
+//                    );
+                } 
+
+            } else {
+
+                out.println("No Record found <br> Invalid Credentials");
+            }
+
 //            stmt.executeUpdate(insert_sql);
-            
-            if(username.equals(dbuname) && password.equals(dbpass)){
-                out.println("Welcome, "+username);
-            }
-            else{
-                out.println("Invalid Credentials");
-                out.println(username.equals(dbuname));
-                
-            }
-            
 //            out.println("credentials added to database");
         } catch (SQLException ex) {
-            out.println("Error");
+
             out.println(ex);
 //            out.Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
