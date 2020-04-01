@@ -10,6 +10,7 @@ import MeroApp.com.DBcon.DB_Connection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -52,15 +53,31 @@ public class Login extends HttpServlet {
             
             Statement stmt = con.createStatement();
             
-//            if(advancejava.credentials){
-//                
-//            }
+            
             count_id++;
             String insert_sql = "insert into credentials values('"+count_id+"','"+username+"','"+password+"')";
-            stmt.executeUpdate(insert_sql);
+            String unameSql = "select user_name from credentials where user_name='"+username+"' ";
+            String passSql = "select user_password from credentials where user_password='"+password+"' ";
             
-            out.println("credentials added to database");
+            ResultSet dbuname = stmt.executeQuery(unameSql);
+            
+            out.println(dbuname);
+            ResultSet dbpass = stmt.executeQuery(passSql);
+            
+//            stmt.executeUpdate(insert_sql);
+            
+            if(username.equals(dbuname) && password.equals(dbpass)){
+                out.println("Welcome, "+username);
+            }
+            else{
+                out.println("Invalid Credentials");
+                out.println(username.equals(dbuname));
+                
+            }
+            
+//            out.println("credentials added to database");
         } catch (SQLException ex) {
+            out.println("Error");
             out.println(ex);
 //            out.Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
