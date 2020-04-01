@@ -33,8 +33,8 @@ public class DB_Connection {
         return null;
     }
 
-    public static void main(String[] arg) {
-        DB_Connection c = new DB_Connection();
-        c.getCon();
-    }
+//    public static void main(String[] arg) {
+//        DB_Connection c = new DB_Connection();
+//        c.getCon();
+//    }
 }
