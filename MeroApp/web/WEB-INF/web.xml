@@ -31,6 +31,15 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>MeroApp.com.servlets.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Register_Servlet</servlet-name>
+        <servlet-class>MeroApp.com.OnlineShopingApplication.Register_Servlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>MeroApp.com.OnlineShopingApplication.login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>meroservlet</servlet-name>
         <url-pattern>/MeroServlet</url-pattern>
@@ -55,9 +64,21 @@
         <servlet-name>Q6Servlet</servlet-name>
         <url-pattern>/Q6Servlet</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Register_Servlet</servlet-name>
+        <url-pattern>/OnlineShoping/Register_Servlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/OnlineShoping/login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
