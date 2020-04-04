@@ -13,12 +13,28 @@
     </head>
     <body>
         <form action="Q5Registration" method="POST">
-            
+
             <h1>Registration Form</h1>
-            first Name :<input type="text" name="fname"/><br>
-            last Name:<input type="text" name="lname"/></br>
-            Email: <input type="email" name="email"/><br>
-            <input type="submit" value="send"/>
+
+            <table>
+                <tr>
+                    <td>first Name</td>
+                    <td>:</td>
+                    <td><input type="text" name="fname"/></td>
+                </tr>
+                <tr>
+                    <td>last Name</td>
+                    <td>:</td>
+                    <td><input type="text" name="lname"/></td>
+                </tr>
+                <tr> 
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" name="email"/></td>
+                </tr>
+                
+            </table>
+            <input type="submit" value="Register"/>
         </form>
     </body>
 </html>
